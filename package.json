@@ -1,0 +1,18 @@
+{
+    "name": "gridzyxs",
+    "version": "1.0.0",
+    "description": "Super Light-Weight Grid generator under 2KB.",
+    "repository": "https://github.com/misterzik/GridzyXS",
+    "author": "Nick 'MisterZik' Rodriguez",
+    "license": "MIT",
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "scripts": {
+        "scss:watch": "node-sass --watch scss -o css",
+        "scss:build": "node-sass css/gxs.css css/gxs.min.css --output-style compressed && node-sass --include-path scss scss/gxs.scss src/css/gxs.css && node-sass src/css/gxs.css src/css/gxs.min.css --output-style compressed"
+    },
+    "devDependencies": {
+        "node-sass": "^4.12.0"
+    }
+}

@@ -1,0 +1,25 @@
+/* 
+ * GridzyXS
+ * --------------------
+ * Ligthweight Grid CSS
+ * --------------------
+ * Mixin's
+ */
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin center-block() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+@mixin full-block() {
+    display: block;
+    width: 100%;
+}

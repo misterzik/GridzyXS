@@ -1,0 +1,56 @@
+/* 
+ * GridzyXS
+ * --------------------
+ * Ligthweight Grid CSS
+ * --------------------
+ */
+
+@import "_global";
+.gxs-container {
+    @include center-block;
+}
+
+.gxs-container-full {
+    @include full-block;
+}
+
+.gxs-container-full .gxs-wrapper {
+    width: $container-width;
+}
+
+.gxs-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gxs-wrapper,
+.gxs-row {
+    @extend %clearfix;
+}
+
+[class*='col-'] {
+    float: left;
+    padding: 1em;
+    width: 100%;
+    min-height: 1px;
+}
+
+@media #{$breakpoint-medium} {
+    .gxs-wrapper {
+        width: 95%;
+        max-width: $grid-max-width;
+    }
+    @for $i from 1 through $grid-columns {
+        .col-#{$i} {
+            width: 100% / $grid-columns * $i;
+        }
+    }
+}
+
+
+/* 
+ * GridzyXS
+ * --------------------
+ * Made with Love by MisterZik
+ * --------------------
+ */
